@@ -1,5 +1,6 @@
 const httprequest= new XMLHttpRequest();
 const field = document.getElementById("searchfield")
+const result = document.getElementById("result")
 
 
 
@@ -11,7 +12,7 @@ document.getElementById("searchbutton").addEventListener("click", function(){
        if (httprequest.readyState=== XMLHttpRequest.DONE){
          if(httprequest.status===200)  {
              
-       alert(httprequest.responseText)
+       result.innerHTML=httprequest.responseText
          }
        }
    }
